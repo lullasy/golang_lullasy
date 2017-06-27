@@ -1,0 +1,2 @@
+# golang_lullasy
+ABCとかいろいろ
