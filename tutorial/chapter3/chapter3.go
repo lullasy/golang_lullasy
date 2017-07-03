@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 // パッケージ変数実質グローバル
 var pkg = 100
@@ -30,4 +33,17 @@ func main() {
 
 func one() int {
 	return 1
+}
+
+// オーバーフロー（ラップアラウンド）を防ぐ方法
+func doSomething(a, b uint32) bool {
+	if (math.MaxUint32 - a) < b {
+		// overflow
+		return false
+	} else {
+		sum := a + b
+		fmt.Println(sum)
+		return true
+	}
+	return false
 }
