@@ -11,4 +11,12 @@ func main() {
 
 	// デバッグに便利
 	fmt.Printf("データ型埋め込み %v, リテラル表現 %#v, 型情報 %T\n", [...]int{1, 2, 3}, [...]int{1, 2, 3}, [...]int{1, 2, 3})
+
+	// 宣言と代入一緒にする、返り値が変数の型になる
+	n := one()
+	fmt.Println(n)
+}
+
+func one() int {
+	return 1
 }
