@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// パッケージ変数実質グローバル
+var pkg = 100
+
 func main() {
 	// 通常の宣言 型指定
 	var x, y int
@@ -15,6 +18,14 @@ func main() {
 	// 宣言と代入一緒にする、返り値が変数の型になる
 	n := one()
 	fmt.Println(n)
+
+	pkg = pkg + 1
+	fmt.Println(pkg)
+
+	a := 1
+	// b := 2 error
+	// c := 3 error
+	fmt.Println(a)
 }
 
 func one() int {
