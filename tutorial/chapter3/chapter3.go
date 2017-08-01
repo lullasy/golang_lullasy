@@ -29,6 +29,20 @@ func main() {
 	// b := 2 error
 	// c := 3 error
 	fmt.Println(a)
+
+	// array
+	// 要素数変えられない　それは slice
+	a1 := [3]int{1, 2, 3}
+	a2 := [...]int{1, 2, 3, 4, 5} // ->[5]int
+	fmt.Println(a1, a2)
+
+	// なんでも代入できる
+	var inter interface{}
+	inter = "string"
+	fmt.Println(inter)
+	inter = 5.5
+	fmt.Println(inter)
+
 }
 
 func one() int {
